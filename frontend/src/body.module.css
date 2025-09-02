@@ -1,0 +1,21 @@
+.body{
+    margin-top: 10px;
+}
+
+.button{
+    background-color: #0000ffa9;
+    color: #000000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin:5px
+}
+
+.video{
+  width: 100%;    
+  max-width: 600px;   
+  height: auto;       
+  border-radius: 5px;
+  margin:5px
+}
