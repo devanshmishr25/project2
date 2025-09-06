@@ -23,7 +23,7 @@ const Body = () => {
 
   return (
     <div className={styles.body}>
-      <button className={styles.button} onClick={AllowCamMic}>Allow Camera & Mic</button>
+      <button className={styles.button} onClick={AllowCamMic}>Allow Camera & mic</button>
       <button className={styles.button} onClick={ShareScreen}>Share Screen</button>
       <Recorder screenStream={screenStream} micStream={micStream} />
 

@@ -15,19 +15,16 @@ const Recorder = ({ screenStream, micStream }) => {
     const audioContext = new AudioContext();
     const destination = audioContext.createMediaStreamDestination();
 
-    // System audio
     if (screenStream.getAudioTracks().length > 0) {
       audioContext.createMediaStreamSource(screenStream).connect(destination);
     }
 
-    // Mic audio
     if (micStream && micStream.getAudioTracks().length > 0) {
       audioContext.createMediaStreamSource(micStream).connect(destination);
     }
 
-    // Merge streams
     const combined = new MediaStream([
-      ...screenStream.getVideoTracks(), //here ... means spread operator(for study)
+      ...screenStream.getVideoTracks(), 
       ...destination.stream.getAudioTracks(),
     ]);
 
